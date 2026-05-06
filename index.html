@@ -3,82 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tampat Solutions</title>
+  <title>Sistema de Respuesta Inmediata | Tampat Solutions</title>
+  <meta name="description" content="Convierte visitas en mensajes reales por WhatsApp con un sistema de respuesta inmediata. Implementación en 48 horas." />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    :root{
+      --bg:#0B0B0B;
+      --primary:#6D0F1B;
+      --text:#F5F5F5;
+      --muted:#BFBFBF;
+      --card:#111111;
+      --accent:#8f1a2a;
     }
-    header {
-      padding: 40px 20px;
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
-    h1 {
-      font-size: 2.8rem;
-      color: #e63946;
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:20px;
     }
-    p {
-      max-width: 650px;
-      line-height: 1.5;
-      font-size: 1.1rem;
+    h1{font-size:clamp(28px,4vw,44px);line-height:1.2;margin-bottom:12px;}
+    h2{font-size:clamp(22px,3vw,30px);margin-bottom:10px;}
+    p{color:var(--muted);margin-bottom:14px;}
+    .section{padding:60px 0;border-bottom:1px solid #1c1c1c;}
+    .hero{padding:80px 0;text-align:center;}
+    .btn{
+      display:inline-block;
+      padding:14px 22px;
+      background:var(--primary);
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      margin-top:16px;
+      font-weight:600;
+      transition:0.2s;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: #e63946;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: 0.3s;
+    .btn:hover{background:var(--accent);}
+    .micro{font-size:14px;color:#aaa;margin-top:6px;}
+    ul{margin-top:10px;padding-left:18px;}
+    li{margin-bottom:8px;color:var(--muted);}
+    .grid{
+      display:grid;
+      gap:20px;
     }
-    .btn:hover {
-      background: #b71c1c;
+    @media(min-width:768px){
+      .grid-2{grid-template-columns:1fr 1fr;}
     }
-    footer {
-      margin-top: 60px;
-      padding: 20px;
-      opacity: 0.6;
-      font-size: 0.9rem;
+    form{
+      background:var(--card);
+      padding:20px;
+      border-radius:10px;
     }
+    input, textarea{
+      width:100%;
+      padding:12px;
+      margin-bottom:12px;
+      border:none;
+      border-radius:6px;
+      background:#1a1a1a;
+      color:#fff;
+    }
+    input::placeholder, textarea::placeholder{color:#888;}
+    footer{padding:30px 0;text-align:center;font-size:14px;color:#777;}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Tampat Solutions</h1>
-    <p>
-      Automatizamos procesos, desarrollamos scripts y creamos soluciones en Python
-      para pequeñas empresas, negocios locales y emprendedores que buscan ahorrar tiempo,
-      reducir costos y modernizar su operación.
-    </p>
 
-    <a class="btn" href="mailto:tampatsolutions@gmail.com">Solicitar cotización</a>
-  </header>
+  <!-- HERO -->
+  <section class="hero container">
+    <h1>¿Estás perdiendo clientes por no responder a tiempo?</h1>
+    <p>Activa un sistema que responde al instante y convierte visitas en mensajes reales listos para cerrar.</p>
+    <a class="btn" href="https://wa.me/56931901166?text=Hola,%20quiero%20activar%20el%20sistema%20de%20respuesta%20inmediata">
+      Quiero que me escriban clientes hoy
+    </a>
+    <div class="micro">Si tu negocio ya recibe visitas, esto es para ti.</div>
+  </section>
 
-<section id="cotizador" style="margin-top:40px;">
-  <h2>Cotización Inteligente</h2>
+  <!-- TENSIÓN -->
+  <section class="section container">
+    <ul>
+      <li>Cada visita sin respuesta es un cliente perdido</li>
+      <li>Te contactan cuando ya eligieron a otro</li>
+      <li>No es falta de clientes, es falta de sistema</li>
+      <li>Estás dejando ventas sobre la mesa</li>
+    </ul>
+  </section>
 
-  <p>
-    Estima rápidamente el valor de tu proyecto tecnológico.
-    Desarrollo web, automatización, bots y soluciones a medida.
-  </p>
+  <!-- DIAGNÓSTICO -->
+  <section class="section container">
+    <h2>El problema no es tu negocio</h2>
+    <p>No necesitas más seguidores.</p>
+    <p>Necesitas que las personas que ya llegan a tu negocio tengan una forma directa de contactarte en el momento exacto.</p>
+    <p>Sin respuesta inmediata, la intención desaparece.</p>
+  </section>
 
-  <a
-    class="btn"
-    href="https://tampatsolutions.github.io/tampat-cotizador-web/"
-    target="_blank"
-  >
-    Ir al cotizador
-  </a>
-</section>
+  <!-- SOLUCIÓN -->
+  <section class="section container">
+    <h2>Sistema de Respuesta Inmediata</h2>
+    <p>Instalamos un sistema que hace que cada persona interesada pueda escribirte en segundos y recibir respuesta inmediata sin que tengas que estar pendiente todo el tiempo.</p>
+    <ul>
+      <li>Conexión directa a WhatsApp</li>
+      <li>Mensaje inicial automático</li>
+      <li>Flujo simple que evita perder contactos</li>
+    </ul>
+    <a class="btn" href="https://wa.me/56931901166?text=Hola,%20quiero%20activar%20esto%20en%20mi%20negocio">
+      Quiero activar esto en mi negocio
+    </a>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="section container">
+    <h2>Lo que empieza a pasar cuando lo activas</h2>
+    <ul>
+      <li>Recibes más mensajes cada día</li>
+      <li>Respondes sin retraso</li>
+      <li>Dejas de perder clientes</li>
+      <li>Aumentan tus oportunidades de venta</li>
+    </ul>
+  </section>
+
+  <!-- IMPLEMENTACIÓN -->
+  <section class="section container">
+    <h2>Rápido y sin complicaciones</h2>
+    <p>El sistema queda funcionando en menos de 48 horas.</p>
+    <p>No necesitas conocimientos técnicos. No cambia tu forma de trabajar. Solo empiezas a recibir más conversaciones.</p>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="section container grid grid-2">
+    <div>
+      <h2>Cuéntame sobre tu negocio</h2>
+      <p>Si ya tienes visitas, podemos ayudarte a convertirlas en clientes.</p>
+    </div>
+    <form action="mailto:tampatsolutions@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Nombre" placeholder="Tu nombre" required />
+      <input type="text" name="Negocio" placeholder="¿Qué tipo de negocio tienes?" required />
+      <input type="tel" name="WhatsApp" placeholder="Número donde quieres recibir clientes" required />
+      <textarea name="Problema" placeholder="¿Qué está pasando actualmente con tus clientes?" required></textarea>
+      <button class="btn" type="submit">Quiero que me contacten clientes reales</button>
+      <div class="micro">Te responderé en el mismo día. Solo si ya tienes un negocio activo.</div>
+    </form>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section container" style="text-align:center;">
+    <h2>Empieza hoy a recibir mensajes reales</h2>
+    <p>Si ya tienes visitas, es momento de convertirlas en clientes.</p>
+    <p class="micro">Trabajo con pocos negocios por semana para asegurar que funcione correctamente.</p>
+    <a class="btn" href="https://wa.me/56931901166?text=Hola,%20quiero%20empezar%20a%20recibir%20clientes">
+      Quiero empezar a recibir clientes ahora
+    </a>
+  </section>
+
   <footer>
-    © 2025 Tampat Solutions — Tecnología útil y accesible
+    Tampat Solutions · tampatsolutions@gmail.com
   </footer>
+
 </body>
 </html>
